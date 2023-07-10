@@ -1,7 +1,11 @@
 import './bootstrap';
 
-import Alpine from 'alpinejs';
+import { createApp } from 'vue/dist/vue.esm-bundler.js';
+import App from "./components/App.vue";
+const app = createApp({
+  components: {
+    App,
+  },
+});
 
-window.Alpine = Alpine;
-
-Alpine.start();
+app.mount("#app");
